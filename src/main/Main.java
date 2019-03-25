@@ -1,16 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
+import models.Administrador;
 import models.Conductor;
 import windows.*;
 import models.ListaEstacionamientos;
 import models.Espacio;
 import models.Estacionamiento;
 import models.ListaConductores;
-
 
 /**
  *
@@ -22,20 +17,15 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    
-    
-    
-    
-    
-    
-    //DATOS POR DEFECTO
-    
-        //Creacion de la lista de Estacionamientos
-        public static ListaEstacionamientos listadeEstacionamiento = new ListaEstacionamientos();
-        public static ListaConductores listadeConductores = new ListaConductores();
-        public static Conductor conductoractual;
+
+    public static ListaEstacionamientos listadeEstacionamiento = new ListaEstacionamientos();
+    public static ListaConductores listadeConductores = new ListaConductores();
+    public static Conductor conductoractual;
+    public static Administrador admin;
 
     public static void cargarDatos(){
+        admin = new Administrador("123", "123");
+        
         listadeConductores.insertarInicio("Carlos", 123, 2340, "ABC-123");
         //Falta insertar la hora de llegada en la pila
         listadeConductores.insertarInicio("Marta", 456, 3450, "321123");
@@ -45,19 +35,27 @@ public class Main {
         listadeConductores.insertarInicio("Javier", 789, 8900, "ABC-123");
         //Falta insertar la hora de llegada en la pila
         listadeConductores.insertarInicio("Fabiola", 901, 9010, "ABD-223");
-    }     
+        //Falta insertar la hora de llegada en la pila
         
-        
-        
-    //Constructor del Main    
+        listadeEstacionamiento.InsertarFinal(
+                new Estacionamiento("Bromelia", 2, 1, 19, 3));
+        listadeEstacionamiento.InsertarFinal(
+                new Estacionamiento("Concha", 2, 3, 15, 2));
+        listadeEstacionamiento.InsertarFinal(
+                new Estacionamiento("Talamasoa", 2, 2, 12, 3));
+        listadeEstacionamiento.InsertarFinal(
+                new Estacionamiento("Nivel 1", 2, 2, 7, 2));
+        listadeEstacionamiento.InsertarFinal(
+                new Estacionamiento("Nivel 2", 2, 2, 19, 1));
+   
+    }
+    
     public static void main(String[] args) {
         cargarDatos();
         
         Principal ventanaPrincipal= new Principal();
         ventanaPrincipal.setVisible(true);
-    }
-   
-    
+    }    
 }
 
 //Cosas por hacer. 
