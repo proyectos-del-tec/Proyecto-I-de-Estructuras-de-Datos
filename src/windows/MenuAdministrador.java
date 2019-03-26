@@ -30,8 +30,12 @@ public class MenuAdministrador extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Boton_Volver = new javax.swing.JButton();
+        labelCrearNuevoEstacionamiento = new javax.swing.JLabel();
+        labelModificarEstacionamiento = new javax.swing.JLabel();
+        labelEliminarEstacionamiento = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/images/administradoricon.png"))); // NOI18N
@@ -46,19 +50,32 @@ public class MenuAdministrador extends javax.swing.JFrame {
             }
         });
 
+        labelCrearNuevoEstacionamiento.setForeground(new java.awt.Color(0, 0, 255));
+        labelCrearNuevoEstacionamiento.setText("» Crear nuevo Estacionamiento");
+
+        labelModificarEstacionamiento.setForeground(new java.awt.Color(0, 0, 255));
+        labelModificarEstacionamiento.setText("» Modificar Estacionamiento");
+
+        labelEliminarEstacionamiento.setForeground(new java.awt.Color(0, 0, 255));
+        labelEliminarEstacionamiento.setText("» Eliminar Estacionamiento");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Boton_Volver)
+                .addGap(21, 21, 21))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Boton_Volver)
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap())))
+                    .addComponent(labelCrearNuevoEstacionamiento)
+                    .addComponent(labelModificarEstacionamiento)
+                    .addComponent(labelEliminarEstacionamiento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(20, 20, 20)
@@ -68,8 +85,17 @@ public class MenuAdministrador extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(labelCrearNuevoEstacionamiento)
+                        .addGap(18, 18, 18)
+                        .addComponent(labelModificarEstacionamiento)
+                        .addGap(18, 18, 18)
+                        .addComponent(labelEliminarEstacionamiento)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
                 .addComponent(Boton_Volver))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,5 +154,8 @@ public class MenuAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton Boton_Volver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel labelCrearNuevoEstacionamiento;
+    private javax.swing.JLabel labelEliminarEstacionamiento;
+    private javax.swing.JLabel labelModificarEstacionamiento;
     // End of variables declaration//GEN-END:variables
 }
