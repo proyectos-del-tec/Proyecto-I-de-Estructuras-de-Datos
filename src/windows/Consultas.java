@@ -28,6 +28,12 @@ public class Consultas extends javax.swing.JFrame {
     private void initComponents() {
 
         Boton_Volver = new javax.swing.JButton();
+        labelTiempoPromedio = new javax.swing.JLabel();
+        labelHoraDelDiaEstacionamientosMasLlenos = new javax.swing.JLabel();
+        labelCualEstacionamientoSeLlenaMas = new javax.swing.JLabel();
+        label10ConductoresConMasVisitas = new javax.swing.JLabel();
+        label5ConductoresConMasTiempoEnElEstacionamiento = new javax.swing.JLabel();
+        labelMostrarPorEstacionamientoLos3EspaciosPreferidos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,18 +44,70 @@ public class Consultas extends javax.swing.JFrame {
             }
         });
 
+        labelTiempoPromedio.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        labelTiempoPromedio.setForeground(new java.awt.Color(0, 0, 255));
+        labelTiempoPromedio.setText("» Tiempo promedio de la permanencia por vehículo dentro de la organización.");
+        labelTiempoPromedio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        labelHoraDelDiaEstacionamientosMasLlenos.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        labelHoraDelDiaEstacionamientosMasLlenos.setForeground(new java.awt.Color(0, 0, 255));
+        labelHoraDelDiaEstacionamientosMasLlenos.setText("» Hora del día en los estacionamientos están más llenos.");
+        labelHoraDelDiaEstacionamientosMasLlenos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        labelCualEstacionamientoSeLlenaMas.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        labelCualEstacionamientoSeLlenaMas.setForeground(new java.awt.Color(0, 0, 255));
+        labelCualEstacionamientoSeLlenaMas.setText("» Cuál estacionamiento tiende a llenarse más rápido.");
+        labelCualEstacionamientoSeLlenaMas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        label10ConductoresConMasVisitas.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        label10ConductoresConMasVisitas.setForeground(new java.awt.Color(0, 0, 255));
+        label10ConductoresConMasVisitas.setText("» Los 10 conductores con más visitas al estacionamiento.");
+        label10ConductoresConMasVisitas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        label5ConductoresConMasTiempoEnElEstacionamiento.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        label5ConductoresConMasTiempoEnElEstacionamiento.setForeground(new java.awt.Color(0, 0, 255));
+        label5ConductoresConMasTiempoEnElEstacionamiento.setText("» Los 5 conductores con más tiempo de vehículo dentro del estacionamiento.");
+        label5ConductoresConMasTiempoEnElEstacionamiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        labelMostrarPorEstacionamientoLos3EspaciosPreferidos.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        labelMostrarPorEstacionamientoLos3EspaciosPreferidos.setForeground(new java.awt.Color(0, 0, 255));
+        labelMostrarPorEstacionamientoLos3EspaciosPreferidos.setText("» Mostrar por estacionamiento los 3 números preferidos por los usuarios");
+        labelMostrarPorEstacionamientoLos3EspaciosPreferidos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 337, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(Boton_Volver))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelTiempoPromedio)
+                    .addComponent(labelHoraDelDiaEstacionamientosMasLlenos)
+                    .addComponent(labelCualEstacionamientoSeLlenaMas)
+                    .addComponent(label10ConductoresConMasVisitas)
+                    .addComponent(label5ConductoresConMasTiempoEnElEstacionamiento)
+                    .addComponent(labelMostrarPorEstacionamientoLos3EspaciosPreferidos))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(labelTiempoPromedio)
+                .addGap(18, 18, 18)
+                .addComponent(labelHoraDelDiaEstacionamientosMasLlenos)
+                .addGap(18, 18, 18)
+                .addComponent(labelCualEstacionamientoSeLlenaMas)
+                .addGap(18, 18, 18)
+                .addComponent(label10ConductoresConMasVisitas)
+                .addGap(18, 18, 18)
+                .addComponent(label5ConductoresConMasTiempoEnElEstacionamiento)
+                .addGap(18, 18, 18)
+                .addComponent(labelMostrarPorEstacionamientoLos3EspaciosPreferidos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(Boton_Volver)
                 .addContainerGap())
         );
@@ -101,5 +159,11 @@ public class Consultas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Boton_Volver;
+    private javax.swing.JLabel label10ConductoresConMasVisitas;
+    private javax.swing.JLabel label5ConductoresConMasTiempoEnElEstacionamiento;
+    private javax.swing.JLabel labelCualEstacionamientoSeLlenaMas;
+    private javax.swing.JLabel labelHoraDelDiaEstacionamientosMasLlenos;
+    private javax.swing.JLabel labelMostrarPorEstacionamientoLos3EspaciosPreferidos;
+    private javax.swing.JLabel labelTiempoPromedio;
     // End of variables declaration//GEN-END:variables
 }
