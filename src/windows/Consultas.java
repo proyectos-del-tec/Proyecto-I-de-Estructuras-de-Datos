@@ -34,6 +34,7 @@ public class Consultas extends javax.swing.JFrame {
         label10ConductoresConMasVisitas = new javax.swing.JLabel();
         label5ConductoresConMasTiempoEnElEstacionamiento = new javax.swing.JLabel();
         labelMostrarPorEstacionamientoLos3EspaciosPreferidos = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,27 +75,38 @@ public class Consultas extends javax.swing.JFrame {
         labelMostrarPorEstacionamientoLos3EspaciosPreferidos.setText("» Mostrar por estacionamiento los 3 números preferidos por los usuarios");
         labelMostrarPorEstacionamientoLos3EspaciosPreferidos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setText("Consultas");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Boton_Volver))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Boton_Volver)
+                .addGap(37, 37, 37))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelTiempoPromedio)
-                    .addComponent(labelHoraDelDiaEstacionamientosMasLlenos)
-                    .addComponent(labelCualEstacionamientoSeLlenaMas)
-                    .addComponent(label10ConductoresConMasVisitas)
-                    .addComponent(label5ConductoresConMasTiempoEnElEstacionamiento)
-                    .addComponent(labelMostrarPorEstacionamientoLos3EspaciosPreferidos))
-                .addContainerGap(57, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelTiempoPromedio)
+                            .addComponent(labelHoraDelDiaEstacionamientosMasLlenos)
+                            .addComponent(labelCualEstacionamientoSeLlenaMas)
+                            .addComponent(label10ConductoresConMasVisitas)
+                            .addComponent(label5ConductoresConMasTiempoEnElEstacionamiento)
+                            .addComponent(labelMostrarPorEstacionamientoLos3EspaciosPreferidos)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel1)))
+                .addContainerGap(216, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(labelTiempoPromedio)
                 .addGap(18, 18, 18)
@@ -107,9 +119,9 @@ public class Consultas extends javax.swing.JFrame {
                 .addComponent(label5ConductoresConMasTiempoEnElEstacionamiento)
                 .addGap(18, 18, 18)
                 .addComponent(labelMostrarPorEstacionamientoLos3EspaciosPreferidos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Boton_Volver)
-                .addContainerGap())
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -159,6 +171,7 @@ public class Consultas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Boton_Volver;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel label10ConductoresConMasVisitas;
     private javax.swing.JLabel label5ConductoresConMasTiempoEnElEstacionamiento;
     private javax.swing.JLabel labelCualEstacionamientoSeLlenaMas;
