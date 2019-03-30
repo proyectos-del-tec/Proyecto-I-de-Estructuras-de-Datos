@@ -32,14 +32,17 @@ public class Main {
         
         listadeConductores.insertarInicio("Carlos", 123, 2340, "ABC-123");
         horasDeEntrada.agragarNuevaHora("ABC-123", "6:30");
+        horasDeSalida.agragarNuevaHora("ABC-123", "10:30");
         listadeConductores.insertarInicio("Marta", 456, 3450, "321123");
         horasDeEntrada.agragarNuevaHora("321123", "9:21");
         listadeConductores.insertarInicio("Ana", 567, 6780, "DFG-321");
         horasDeEntrada.agragarNuevaHora("DFG-321", "13:13");
-        listadeConductores.insertarInicio("Javier", 789, 8900, "ABC-123");
-        horasDeEntrada.agragarNuevaHora("ABC-123", "14:11");
+        horasDeSalida.agragarNuevaHora("DFG-321", "17:13");
+        listadeConductores.insertarInicio("Javier", 789, 8900, "ABC-122");
+        horasDeEntrada.agragarNuevaHora("ABC-122", "14:11");
         listadeConductores.insertarInicio("Fabiola", 901, 9010, "ABD-223");
         horasDeEntrada.agragarNuevaHora("ABD-223", "8:56");
+        horasDeSalida.agragarNuevaHora("ABD-223", "12:56");
         
         listadeEstacionamiento.InsertarFinal(
                 new Estacionamiento("Bromelia", 2, 1, 19, 3));
@@ -56,9 +59,15 @@ public class Main {
     
     public static void main(String[] args) {
         cargarDatos();
-        
-        Principal ventanaPrincipal= new Principal();
-        ventanaPrincipal.setVisible(true);
+        models.ConsultasCodigo c = new models.ConsultasCodigo();
+        System.out.println(c.obtenerDiferenciaDeHoras("12:45", "24:50"));
+        System.out.println(c.pasarHoraAMinutos("2:04"));
+        System.out.println(c.pasarMinutosAHoras(124));
+        System.out.println(c.obtenerTiempoPromedioEstanciaVehiculos(
+                horasDeEntrada, horasDeSalida));
+//        c.obtenerDiferenciaDeHoras("12:45", "13:45");
+//        Principal ventanaPrincipal= new Principal();
+//        ventanaPrincipal.setVisible(true);
     }    
 }
 
