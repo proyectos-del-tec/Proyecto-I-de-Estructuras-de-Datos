@@ -42,4 +42,26 @@ public class ColaDeHoras {
         return cont;
     }
     
+    public void agragarNuevaHora(String placa, String hora){
+        NodoHora nuevaHora = new NodoHora(placa, hora);
+        
+        nuevaHora.setSig(ultimaHora);
+        ultimaHora = nuevaHora;
+        
+        if (primeraHora == null) {
+            primeraHora = nuevaHora;
+        }
+    }
+    
+    public void eliminarHora(String placa){
+        for (NodoHora horaTemp = ultimaHora; horaTemp != null; 
+                horaTemp = horaTemp.getSig()) {
+            if(horaTemp.getSig().getPlaca().equals(placa)){
+                horaTemp.setSig(horaTemp.getSig().getSig());
+                return;
+            }
+        }
+        System.out.println("No se encontro el vehiculo");
+    }
+    
 }

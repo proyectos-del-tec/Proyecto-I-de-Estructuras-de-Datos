@@ -1,9 +1,9 @@
 package main;
 import models.Administrador;
+import models.ColaDeHoras;
 import models.Conductor;
 import windows.*;
 import models.ListaEstacionamientos;
-import models.Espacio;
 import models.Estacionamiento;
 import models.ListaConductores;
 
@@ -22,20 +22,24 @@ public class Main {
     public static ListaConductores listadeConductores = new ListaConductores();
     public static Conductor conductoractual;
     public static Administrador admin;
+    public static ColaDeHoras horasDeEntrada = new ColaDeHoras();
+    public static ColaDeHoras horasDeSalida = new ColaDeHoras();    
 
     public static void cargarDatos(){
+        
+        
         admin = new Administrador("123", "123");
         
         listadeConductores.insertarInicio("Carlos", 123, 2340, "ABC-123");
-        //Falta insertar la hora de llegada en la pila
+        horasDeEntrada.agragarNuevaHora("ABC-123", "6:30");
         listadeConductores.insertarInicio("Marta", 456, 3450, "321123");
-        //Falta insertar la hora de llegada en la pila
+        horasDeEntrada.agragarNuevaHora("321123", "9:21");
         listadeConductores.insertarInicio("Ana", 567, 6780, "DFG-321");
-        //Falta insertar la hora de llegada en la pila
+        horasDeEntrada.agragarNuevaHora("DFG-321", "13:13");
         listadeConductores.insertarInicio("Javier", 789, 8900, "ABC-123");
-        //Falta insertar la hora de llegada en la pila
+        horasDeEntrada.agragarNuevaHora("ABC-123", "14:11");
         listadeConductores.insertarInicio("Fabiola", 901, 9010, "ABD-223");
-        //Falta insertar la hora de llegada en la pila
+        horasDeEntrada.agragarNuevaHora("ABD-223", "8:56");
         
         listadeEstacionamiento.InsertarFinal(
                 new Estacionamiento("Bromelia", 2, 1, 19, 3));
