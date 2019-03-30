@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package windows;
-
+import main.Main;
 import javax.swing.JOptionPane;
 
 /**
@@ -62,6 +62,11 @@ public class HoradeEntrada extends javax.swing.JDialog {
 
         aceptar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         aceptar.setText("Aceptar");
+        aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aceptarActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel4.setText("Hora min.: 6:00, hora max.: 21:59");
@@ -120,6 +125,14 @@ public class HoradeEntrada extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
+        //Se guarda la hora en una variable String
+        String horaDeEntrada = (String)(horaSpinner.getValue())+":"+
+                (String)(minutosSpinner.getValue());
+        //Main.horasDeSalida.agragarNuevaHora(placa, horaDeEntrada); 
+        //falta obtener la placa
+    }//GEN-LAST:event_aceptarActionPerformed
 
     /**
      * @param args the command line arguments
